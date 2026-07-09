@@ -8,7 +8,7 @@ urlpatterns = [
     path('students', views.student_list, name='student_list'),
 
     path('add-student', views.add_student, name='add_student'),
-
+# test comments for git push
     
 
 ]
