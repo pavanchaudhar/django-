@@ -21,7 +21,7 @@ Update Student
                 {% csrf_token %}
 
                 <div class="mb-3">
-                    <label class="form-label">Name</label>
+                    <label>Name</label>
                     <input type="text"
                            name="name"
                            class="form-control"
@@ -30,7 +30,7 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Age</label>
+                    <label>Age</label>
                     <input type="number"
                            name="age"
                            class="form-control"
@@ -39,22 +39,22 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Gender</label>
+                    <label>Gender</label>
 
                     <select name="gender" class="form-select">
 
                         <option value="Male"
-                        {% if student.gender == 'Male' %}selected{% endif %}>
+                        {% if student.gender == "Male" %}selected{% endif %}>
                         Male
                         </option>
 
                         <option value="Female"
-                        {% if student.gender == 'Female' %}selected{% endif %}>
+                        {% if student.gender == "Female" %}selected{% endif %}>
                         Female
                         </option>
 
                         <option value="Other"
-                        {% if student.gender == 'Other' %}selected{% endif %}>
+                        {% if student.gender == "Other" %}selected{% endif %}>
                         Other
                         </option>
 
@@ -63,7 +63,7 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Email</label>
+                    <label>Email</label>
                     <input type="email"
                            name="email"
                            class="form-control"
@@ -72,7 +72,7 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Phone</label>
+                    <label>Phone</label>
                     <input type="text"
                            name="phone"
                            class="form-control"
@@ -81,14 +81,14 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Address</label>
+                    <label>Address</label>
                     <textarea name="address"
                               class="form-control"
                               rows="3">{{ student.address }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Department</label>
+                    <label>Department</label>
 
                     <select name="department" class="form-select">
 
@@ -108,7 +108,7 @@ Update Student
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Course</label>
+                    <label>Course</label>
 
                     <select name="course" class="form-select">
 

@@ -4,7 +4,7 @@ from .models import department, Course, Student
 
 @admin.register(department)
 class DepartmentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'department_name')
+    list_display = ('id', 'department_name' ,'department_type')
     search_fields = ('department_name',)
 
 

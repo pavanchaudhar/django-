@@ -3,6 +3,7 @@ from django.db import models
 
 class department(models.Model):
     department_name = models.CharField(max_length=100)
+    department_type = models.CharField(max_length=100)
 
     def __str__(self):
         return self.department_name
