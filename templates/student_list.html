@@ -17,7 +17,26 @@ Students
         </a>
 
     </div>
+<form method="GET" class="mb-4">
 
+    <div class="input-group">
+
+        <input
+            type="text"
+            name="search"
+            class="form-control"
+            placeholder="Search Student..."
+            value="{{ request.GET.search }}">
+
+        <button class="btn btn-primary">
+
+            Search
+
+        </button>
+
+    </div>
+
+</form>
     <table class="table table-bordered table-hover">
 
         <thead class="table-dark">
@@ -115,5 +134,6 @@ Students
     </table>
 
 </div>
+
 
 {% endblock %}

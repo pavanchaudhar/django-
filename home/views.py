@@ -8,10 +8,20 @@ def home(request):
     return render(request, 'home.html')
 
 
-def student_list(request):
-    students = Student.objects.all()
-    return render(request, 'student_list.html', {'students': students})
+def  student_list(request):
 
+    search = request.GET.get('search')
+
+    if search:
+        students = Student.objects.filter(name__icontains=search)
+    else:
+        students = Student.objects.all()
+
+    context = {
+        'students': students
+    }
+
+    return render(request, 'student_list.html', context)
 
 def add_student(request):
 
@@ -87,3 +97,4 @@ def delete_student(request, id):
         return redirect('student_list')
 
     return render(request, 'delete_student.html', {'student': student})
+
